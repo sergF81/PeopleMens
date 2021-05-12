@@ -14,12 +14,9 @@ fun main() {
             println("Application is close!")
             break
         }
-        if (likes == 1 || likes % 10 == 1 && likes != 11) {
-            output = "user"
-        } else output = "users "
+        output = if (likes == 1 || likes % 10 == 1 && likes != 11) "user" else "users "
         println("$likes $output liked your message.")
     }
-
 }
 
 
