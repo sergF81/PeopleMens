@@ -8,7 +8,7 @@ fun main() {
     while (true) {
 
         println("Enter the amount of Likes. If you have finished, enter -1")
-        var likes = Integer.parseInt(readLine())
+        val likes = Integer.parseInt(readLine())
 
         if (likes == -1) {
             println("Application is close!")
