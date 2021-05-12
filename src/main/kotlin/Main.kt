@@ -7,18 +7,19 @@ fun main() {
 
     while (true) {
 
-        println("Enter the amount of Likes. If you have finished, enter N")
-        var likes = readLine();
-        if (likes == "N") {
+        println("Enter the amount of Likes. If you have finished, enter -1")
+        var likes = Integer.parseInt(readLine())
+
+        if (likes == -1) {
             println("Application is close!")
             break
         }
-        if (likes != null) {
-            if (likes.get(likes.lastIndex).toString() == "1") {
-                output = "user"
-            } else output = "users "
-        }
+        if (likes == 1 || likes % 10 == 1 && likes != 11) {
+            output = "user"
+        } else output = "users "
         println("$likes $output liked your message.")
     }
+
 }
+
 
